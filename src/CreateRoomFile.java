@@ -4,21 +4,17 @@ import java.io.ObjectOutputStream;
 
 public class CreateRoomFile {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // open file for binary file output
         ObjectOutputStream output = null;
-        try
-        { // Create an output stream for file .txt
+        try { // Create an output stream for file .txt
             output = new ObjectOutputStream(new FileOutputStream("RoomsFile.txt"));
-        } catch (Exception ex)
-        {
+        } catch (Exception ex) {
             System.out.println("Unable to open file for writing- try again");
             System.exit(0);
         }
 
-        try
-        {
+        try {
             Rooms room1 = new Rooms(1, "Beginning", "You are standing at the end of a road before a dark and dank cave. The forest is covering the road lending a dark and\n" +
                     "spooky aspect to the road. You hear a low wailing that seems to be coming from the cave.", "WEST 2");
             output.writeObject(room1);
@@ -45,19 +41,16 @@ public class CreateRoomFile {
                     "UP 3 or EAST 5");
             output.writeObject(room6);
 
-        } catch (IOException ex)
-        {
+        } catch (IOException ex) {
             ex.printStackTrace();
             System.out.println("Problem writing to file");
         }
 
-        try
-        {
+        try {
             // close the file
             output.close();
             System.out.println("File successfully written.");
-        } catch (Exception ex)
-        {
+        } catch (Exception ex) {
             System.out.println("unable to properly close file");
         }
     }

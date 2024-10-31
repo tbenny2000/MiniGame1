@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ReadRoomFile {
 
-    public ArrayList<Rooms> readFile(){
+    public ArrayList<Rooms> readFile() {
         ArrayList<Rooms> roomsList = new ArrayList<>();
         try {
             FileInputStream fileStream = new FileInputStream("RoomsFile.txt");
@@ -19,7 +19,6 @@ public class ReadRoomFile {
             Rooms room4 = (Rooms) input.readObject();
             Rooms room5 = (Rooms) input.readObject();
             Rooms room6 = (Rooms) input.readObject();
-
             input.close();
 
             roomsList.add(room1);
@@ -28,8 +27,7 @@ public class ReadRoomFile {
             roomsList.add(room4);
             roomsList.add(room5);
             roomsList.add(room6);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.getStackTrace();
         }
         return roomsList;

@@ -19,34 +19,42 @@ public class Rooms implements Serializable {
     }
 
     public int getRoomId() {
+
         return roomId;
     }
 
     public void setRoomId(int roomId) {
+
         this.roomId = roomId;
     }
 
     public String getRoomName() {
+
         return roomName;
     }
 
     public void setRoomName(String roomName) {
+
         this.roomName = roomName;
     }
 
     public String getRoomDesc() {
+
         return roomDesc;
     }
 
     public void setRoomDesc(String roomDesc) {
+
         this.roomDesc = roomDesc;
     }
 
     public String getRoomExit() {
+
         return roomExit;
     }
 
     public void setRoomExit(String roomExit) {
+
         this.roomExit = roomExit;
     }
 }

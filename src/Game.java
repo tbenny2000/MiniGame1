@@ -42,46 +42,46 @@ public class Game {
                 userChoice = myObj.nextLine();
                 checkWord = roomsObject.getRoomExit().toLowerCase().contains(userChoice.toLowerCase());
             }
-                // update current room of player to Model.DB
-                // when currentRoom 1
-                if (currentRoom == 1) {
-                    currentRoom = 2;
-                    // when currentRoom 2
+            // update current room of player to Model.DB
+            // when currentRoom 1
+            if (currentRoom == 1) {
+                currentRoom = 2;
+                // when currentRoom 2
 
-                } else if (currentRoom == 2 && (userChoice.equalsIgnoreCase("east") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("e"))) {
-                        currentRoom = 1;
-                } else if (currentRoom == 2 && (userChoice.equalsIgnoreCase("west") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("w"))) {
-                        currentRoom = 3;
+            } else if (currentRoom == 2 && (userChoice.equalsIgnoreCase("east") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("e"))) {
+                currentRoom = 1;
+            } else if (currentRoom == 2 && (userChoice.equalsIgnoreCase("west") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("w"))) {
+                currentRoom = 3;
 
-                    // when currentRoom 3
-                } else if (currentRoom == 3 && (userChoice.equalsIgnoreCase("east") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("e"))) {
-                        currentRoom = 2;
-                } else if (currentRoom == 3 && (userChoice.equalsIgnoreCase("down") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("d"))) {
-                        currentRoom = 6;
+                // when currentRoom 3
+            } else if (currentRoom == 3 && (userChoice.equalsIgnoreCase("east") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("e"))) {
+                currentRoom = 2;
+            } else if (currentRoom == 3 && (userChoice.equalsIgnoreCase("down") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("d"))) {
+                currentRoom = 6;
 
-                    // when currentRoom 4
-                } else if (currentRoom == 4 && (userChoice.equalsIgnoreCase("north") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("n"))) {
-                        currentRoom = 5;
+                // when currentRoom 4
+            } else if (currentRoom == 4 && (userChoice.equalsIgnoreCase("north") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("n"))) {
+                currentRoom = 5;
 
-                    // when currentRoom 5
-                } else if (currentRoom == 5 && (userChoice.equalsIgnoreCase("south") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("s"))) {
-                        currentRoom = 4;
-                } else if (currentRoom == 5 && (userChoice.equalsIgnoreCase("west") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("w"))) {
-                        currentRoom = 6;
+                // when currentRoom 5
+            } else if (currentRoom == 5 && (userChoice.equalsIgnoreCase("south") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("s"))) {
+                currentRoom = 4;
+            } else if (currentRoom == 5 && (userChoice.equalsIgnoreCase("west") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("w"))) {
+                currentRoom = 6;
 
-                } else if (currentRoom == 6 && (userChoice.equalsIgnoreCase("up") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("u"))) {
-                        currentRoom = 3;
-                } else if (currentRoom == 6 && (userChoice.equalsIgnoreCase("east") ||
-                        userChoice.toLowerCase(Locale.ROOT).startsWith("e"))) {
-                        currentRoom = 5;
+            } else if (currentRoom == 6 && (userChoice.equalsIgnoreCase("up") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("u"))) {
+                currentRoom = 3;
+            } else if (currentRoom == 6 && (userChoice.equalsIgnoreCase("east") ||
+                    userChoice.toLowerCase(Locale.ROOT).startsWith("e"))) {
+                currentRoom = 5;
             }
             checkWord = false;
         }
